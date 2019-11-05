@@ -13,10 +13,33 @@
       <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
       <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav;mfcribbon-ms</Extensions>
     </Filter>
+    <Filter Include="Source Files\Models">
+      <UniqueIdentifier>{6de1ebda-20b7-457d-8dab-c4c89030616b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\Models">
+      <UniqueIdentifier>{3e8cae2a-71a4-45f8-9e54-87be5de5fbf7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\External">
+      <UniqueIdentifier>{d3abb721-f239-42a4-8caa-4478c338bacb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Header Files\External\nlohmann">
+      <UniqueIdentifier>{dd55c5d9-4456-4d4e-b658-206f0bdadf90}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="TestApp.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="MyDataModel.cpp">
+      <Filter>Source Files\Models</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="MyDataModel.h">
+      <Filter>Header Files\Models</Filter>
+    </ClInclude>
+    <ClInclude Include="..\External\nlohmann\json.hpp">
+      <Filter>Header Files\External\nlohmann</Filter>
+    </ClInclude>
   </ItemGroup>
 </Project>
