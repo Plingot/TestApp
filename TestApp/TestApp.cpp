@@ -19,11 +19,12 @@ int main() {
       json j;
       j = m;
 
-      // TODO: Stdout not allowed from this thread
+      // TODO: Prio1 Stdout not allowed from this thread
       cout << j.dump(2) << endl;
     });
 
-    // TODO: Detach this thread and make main-thread into a stdout loop thread
+    // TODO: Prio1 Detach this thread and make main-thread into a stdout loop
+    // thread
     t.join();
   }
 }

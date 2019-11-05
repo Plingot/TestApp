@@ -12,9 +12,11 @@ struct MyDataModel {
   string name;
   string description;
 
-  // TODO: Uncomment this - make sure it works with json serialization and
+  // TODO: Prio2 Uncomment this - make sure it works with json serialization and
   // deserialization
   // float values[10];
+
+  // TODO: Prio4 give us some nice constructors including a copy-constructor
 };
 
 void from_json(const json &j, MyDataModel &m);
