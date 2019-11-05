@@ -1,9 +1,11 @@
 #include "MyDataModel.h"
 #include <iostream>
+#include <thread>
 
 using nlohmann::json;
 using std::cout;
 using std::endl;
+using std::thread;
 
 using namespace TestAppData;
 
@@ -13,9 +15,15 @@ int main() {
   {
     MyDataModel m{"Mio Nilsson", "Code guru"};
 
-    json j;
-    j = m;
+    thread t([m] {
+      json j;
+      j = m;
 
-    cout << j.dump(2) << endl;
+      // TODO: Stdout not allowed from this thread
+      cout << j.dump(2) << endl;
+    });
+
+    // TODO: Detach this thread and make main-thread into a stdout loop thread
+    t.join();
   }
 }
